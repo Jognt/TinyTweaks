@@ -1,5 +1,7 @@
+// Attempt at adding tiny little RCS jets with pinpoint precision to balance the RCS on the MEM
 @PART[MEMLander]:FOR[tinyTweaks]:NEEDS[SquadExpansion/MakingHistory]
 {
+	//Add the models for all the jets. Positions and rotations taken from a perfectly balanced and saved craft file.
 	MODEL:NEEDS[RestockPlus]
 	{
 		model = ReStockPlus/Assets/Control/restock-rcs-single-mini-1
@@ -43,6 +45,7 @@
 		rotation = 0,0,-1.76016499E-08,2
 	}
 	
+	// Add some sound effects
 	@EFFECTS:NEEDS[RestockPlus]
 	{
 		runningStabiliser
@@ -85,6 +88,7 @@
 			}
 		}
 	}
+	// Attempt to add RCS plumes and thrust to the nozzles.
 	MODULE:NEEDS[RestockPlus]
 	{
 		name = ModuleRCSFX

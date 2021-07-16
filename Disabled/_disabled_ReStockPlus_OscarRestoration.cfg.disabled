@@ -1,4 +1,4 @@
-// Undoes the 'balancing' done by ReStockPlus so the Oscar still allows one to build small craft as the basis for the balancing was purely arbitrary.
+// Undoes the balancing done by ReStockPlus.
 // Oscar tanks adhere to the 1600 fuel per 1 mass unit so consider them very well compressed.
 
 @PART[miniFuelTank]:AFTER[ReStockPlus]
