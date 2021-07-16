@@ -1,0 +1,71 @@
+// A 1.25m engine plate.
+
++PART[EnginePlate2]:FOR[tinyTweaks]:NEEDS[SquadExpansion/MakingHistory,!ReStock] {
+	@name = EnginePlate1
+	@author = Snark, tweaked by Jognt
+	@MODEL,* {
+		%scale = 0.5, 0.5, 0.5
+	}
+	@node_stack_top = 0,0.1,0,0,1,0,1
+	@node_stack_bottom = 0,0,0,0,-1,0,1,0,0,1,0
+	@NODE,* {
+		@size=0
+	}
+	@TechRequired:NEEDS[ReStock] = Unresearcheable
+	
+	@entryCost:NEEDS[ProbesBeforeCrew] = 2500
+	@cost:NEEDS[ProbesBeforeCrew] = 400
+	
+	@entryCost:NEEDS[!ProbesBeforeCrew] = 1500
+	@cost:NEEDS[!ProbesBeforeCrew] = 200
+	
+	@title = EP-12 Engine Plate
+	@description = #autoLOC_8310021
+	@mass = 0.075
+	@bulkheadProfiles = size1
+	
+	%TechHidden:NEEDS[ReStock] = true
+	@MODULE[ModuleDecouple] {
+		@ejectionForce = 100
+	}
+
+	@MODULE[ModulePartVariants] {
+		@baseMass = -0.070
+		@baseCost = -173
+		@VARIANT[Short] {
+			@mass = -0.074
+			@cost = -186
+			@NODES {
+				node_stack_bottom = 0.0, -0.3125, 0.0, 0.0, -1.0, 0.0, 1
+			}
+		}
+		@VARIANT[Medium-Short] {
+			@mass = -0.073
+			@cost = -183
+			@NODES {
+				node_stack_bottom = 0.0, -0.625, 0.0, 0.0, -1.0, 0.0, 1
+			}
+		}
+		@VARIANT[Medium] {
+			@mass = -0.072
+			@cost = -179
+			@NODES {
+				node_stack_bottom = 0.0, -0.9375, 0.0, 0.0, -1.0, 0.0, 1
+			}
+		}
+		@VARIANT[Medium-Long] {
+			@mass = -0.071
+			@cost = -178
+			@NODES {
+				node_stack_bottom = 0.0, -1.25, 0.0, 0.0, -1.0, 0.0, 1
+			}
+		}
+		@VARIANT[Long] {
+			@mass = -0.070
+			@cost = -173
+			@NODES {
+				node_stack_bottom = 0.0, -1.875, 0.0, 0.0, -1.0, 0.0, 1
+			}
+		}
+	}
+}

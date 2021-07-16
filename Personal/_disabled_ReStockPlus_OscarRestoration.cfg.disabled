@@ -1,0 +1,78 @@
+// Undoes the 'balancing' done by ReStockPlus so the Oscar still allows one to build small craft as the basis for the balancing was purely arbitrary.
+// Oscar tanks adhere to the 1600 fuel per 1 mass unit so consider them very well compressed.
+
+@PART[miniFuelTank]:AFTER[ReStockPlus]
+  {
+  @mass = 0.025
+  @cost = 70
+  @description ^= :#$description$:\n\nFeatures exceptional fuel capacity due to the alignment of Mar- err Duna and Jool.:
+  @RESOURCE[LiquidFuel]
+  {
+    @amount = 18
+    @maxAmount = 18
+  }
+  @RESOURCE[Oxidizer]
+  {
+    @amount = 22
+    @maxAmount = 22
+  }
+}
+
+// Apply the same logic to the bigger tank variants added by ReStockPlus. 
+
+@PART[restock-fuel-tank-0625-3]:AFTER[ReStockPlus]
+  {
+  @mass = 0.05
+  @cost = 140
+  @description ^= :#$description$:\n\nFeatures exceptional fuel capacity due to the alignment of Mar- err Duna and Jool.:
+  @RESOURCE[LiquidFuel]
+  {
+    @amount = 36
+    @maxAmount = 36
+  }
+  @RESOURCE[Oxidizer]
+  {
+    @amount = 44
+    @maxAmount = 44
+  }
+}
+
+// Who cares about arbitrary consistency above gameplay?
+
+@PART[restock-fuel-tank-0625-2]:AFTER[ReStockPlus]
+  {
+  @mass = 0.1
+  @cost = 280
+  @description ^= :#$description$:\n\nFeatures exceptional fuel capacity due to the alignment of Mar- err Duna and Jool.:
+  @RESOURCE[LiquidFuel]
+  {
+    @amount = 72
+    @maxAmount = 72
+  }
+  @RESOURCE[Oxidizer]
+  {
+    @amount = 88
+    @maxAmount = 88
+  }
+}
+
+// Like.. NONE of the tanks have a set fuel-per-volume. An FLT800 is the same size as a FLT400 and a FLT100/200 yet it has more fuel. MAGIC I tell you.
+
+@PART[restock-fuel-tank-0625-1]:AFTER[ReStockPlus]
+  {
+  @mass = 0.2
+  @cost = 560
+  @description ^= :#$description$:\n\nFeatures exceptional fuel capacity due to the alignment of Mar- err Duna and Jool.:
+  @RESOURCE[LiquidFuel]
+  {
+    @amount = 144
+    @maxAmount = 144
+  }
+  @RESOURCE[Oxidizer]
+  {
+    @amount = 176
+    @maxAmount = 176
+  }
+}
+
+// So let us go forth and build majestic tiny craft by the power of Greysk-.. SCIENCE!
